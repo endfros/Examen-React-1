@@ -123,7 +123,7 @@ export const Employees = () => {
                 </form>
 
             </section>
-            <section className='w-screen px-16'>
+            <section className='bg-black w-screen px-16'>
             <input type="text" className='text-black p-3 mb-4 rounded-lg ' placeholder='Search' onChange={(e) => searchItems(e.target.value)}/>
         {searchInput.length > 1 ?(
             <DataTable
