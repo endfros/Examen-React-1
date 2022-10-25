@@ -8,7 +8,16 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Credenciales
+
+username: admin
+password: admin123
+
+## Dependencias
+
+Cuando el repositorio esté clonado instale las dependencias con el comando `npm install`
+
+## Scripts disponibles
 
 En el directorio del proyecto, puede ejecutar:
 
