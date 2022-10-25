@@ -20,7 +20,6 @@ export const Upload = () => {
           <img
             className='object-cover h-96 w-96'
             src={file.preview}
-            // Revoke data uri after image is loaded
             onLoad={() => { URL.revokeObjectURL(file.preview) }}
           />
         </div>
@@ -28,14 +27,14 @@ export const Upload = () => {
     ));
   
     useEffect(() => {
-      // Make sure to revoke the data uris to avoid memory leaks, will run on unmount
+
       return () => files.forEach(file => URL.revokeObjectURL(file.preview));
     }, []);
   
     return (
       <section className="bg-black text-white grid h-screen justify-items-center">
         <div  {...getRootProps({className: 'dropzone p-12'})}>
-          <input {...getInputProps()} />
+          <input id="image-input" {...getInputProps()} />
           <p className='text-2xl p-20 border-dashed border-8 border-sky-500'>Drag 'n' drop some files here, or click to select files</p>
         </div>
         <aside className='flex flex-row space-x-8'>

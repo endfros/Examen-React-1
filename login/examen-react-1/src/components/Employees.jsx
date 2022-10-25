@@ -77,7 +77,6 @@ export const Employees = () => {
                 birthday: birthday,
               }),
             });
-            let resJson = await res.json();
             if (res.status === 200) {
               setName("");
               setLastName("");
