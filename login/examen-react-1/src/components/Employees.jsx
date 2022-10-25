@@ -18,10 +18,12 @@ const columns = [
 ];
 
 export const Employees = () => {
-    const preventCopyPaste = (e: ClipboardEvent<HTMLInputElement>) => {
-        e.preventDefault()
-        alert("Copying and pasting is not allowed!")
-      }
+    const [searchInput, setSearchInput] = useState('');
+    const [filteredResults, setFilteredResults] = useState([]);
+    const [name, setName] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [birthday, setBirthday] = useState("");
+    const [message, setMessage] = useState("");
 
       const [employees, setEmployees] = useState();
 
@@ -39,11 +41,6 @@ export const Employees = () => {
         getApiData();
       }, []);
 
-
-
-    const [searchInput, setSearchInput] = useState('');
-    const [filteredResults, setFilteredResults] = useState([]);
-
     const searchItems = (searchValue) => {
         setSearchInput(searchValue)
         if (searchInput !== '') {
@@ -56,11 +53,6 @@ export const Employees = () => {
             setFilteredResults(employees)
         }
     }
-
-    const [name, setName] = useState("");
-    const [lastName, setLastName] = useState("");
-    const [birthday, setBirthday] = useState("");
-    const [message, setMessage] = useState("");
 
     const handleSubmit = async (e) => {
         e.preventDefault();
