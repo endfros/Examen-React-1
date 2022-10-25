@@ -1,12 +1,13 @@
 import React from 'react';
 
-export const LoginCard = (props) => {
+export const LoginCard = () => {
     const preventCopyPaste = (e: ClipboardEvent<HTMLInputElement>) => {
         e.preventDefault()
         alert("Copying and pasting is not allowed!")
       }
     return (
-        <section className='bg-slate-200 rounded-lg text-zinc-800 py-8 px-8'>
+        <section className="grid h-screen place-content-center bg-black">
+            <section className='bg-slate-200 rounded-lg text-zinc-800 py-8 px-8'>
             <h1 className='text-3xl font-bold px-4'>Log In</h1>
             <section className='flex flex-col justify-center px-4'>
                 <div className='flex flex-col justify-center py-8'>
@@ -28,6 +29,8 @@ export const LoginCard = (props) => {
                 </div>
                 <button className='bg-stone-900 rounded-xl text-xl font-bold p-2 text-slate-200'>Log In</button>
             </section> 
+            </section>
         </section>
     )
 }
+
